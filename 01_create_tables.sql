@@ -54,3 +54,14 @@ CREATE TABLE orders(
 SELECT * FROM customers;
 SELECT * FROM products;
 SELECT * FROM orders;
+
+/*
+
+    2. Úloha
+
+*/
+
+SELECT o.order_id, c.customer_name, o.sales FROM orders o
+INNER JOIN customers c ON o.customer_id = c.customer_id
+WHERE sales > 500
+ORDER BY sales DESC;
